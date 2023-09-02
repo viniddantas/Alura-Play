@@ -1,11 +1,11 @@
 async function listaVideos () {
-    const conexao = await fetch("../pages/db.json") //http://localhost:3000/videos
+    const conexao = await fetch("../db.json") //http://localhost:3000/videos
     const conexaoConvertida = await conexao.json()
     return conexaoConvertida
 }
 
 async function criaVideo (titulo, descricao, url, imagem) {
-    const conexao = await fetch("../pages/db.json", {
+    const conexao = await fetch("../db.json", {
         method: "POST",
         headers : {
             "Content-type": "application/json"
