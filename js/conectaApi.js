@@ -26,7 +26,7 @@ async function criaVideo (titulo, descricao, url, imagem) {
 }
 
 async function buscaVideo(termoDeBusca) {
-    const conexao = await fetch(`../pages/db.json?q=${termoDeBusca}`)
+    const conexao = await fetch(`../db.json?q=${termoDeBusca}`)
     const conexaoConvertida = conexao.json()
 
     return conexaoConvertida
